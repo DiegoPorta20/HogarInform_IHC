@@ -1,0 +1,443 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    transition: .3s;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/img_principal.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.header-cont{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+}
+.header-cont h1{
+    width: 80%;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 600;
+    padding: 45px 0;
+}
+.header-cont h3{
+    width: 50%;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 500;
+    padding: 45px 0;
+}
+/*******************Head******************/
+.head{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    transition: .3s all;
+}
+.head-cont{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+}
+.head-cont h2{
+    grid-column-start: span 2;
+    font-size: 35px;
+    font-weight: 500;
+}
+.menu-contenedor{
+    grid-column-start: span 4;
+    text-align: end;
+}.menu-contenedor a{
+    text-decoration: none;
+    color: #34342D;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    transition: .3s;
+}
+.menu-contenedor a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    background: rgba(57, 85, 90, 0.534);
+    transition: .3s;
+}
+.menu-contenedor .elegido{
+    color: rgba(57, 85, 90, 0.534);
+}
+.menu-contenedor a:hover{
+    color: rgba(57, 85, 90, 0.534);
+}
+.menu-contenedor a:hover::after{
+    width: 100%;
+}
+.menu-x{
+    display: none;
+    cursor: pointer;
+}
+.menu-x i{
+    font-size: 20px;
+    background: rgba(57, 85, 90, 0.534);
+    border-radius: 5px;
+    color: #fff;
+}
+.menu{
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ocultar{
+    display: none;
+}
+.aparecer{
+    display: flex;
+}
+.x-menu{
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+}
+/******************Head Click**************/
+.head-click{
+    width: 100%;
+    height: 50vh;
+    background: #fff;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    transform: translateY(-130%);
+    transition: .3s;
+}
+.head-click-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bajar{
+    transform: translateY(0);
+}
+.head-click-cont a{
+    text-decoration: none;
+    color: #34342D;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.head-click-cont a:hover{
+    color:rgba(57, 85, 90, 0.534);
+}
+.head-click-cont .elegido{
+    color: rgba(57, 85, 90, 0.534);
+}
+/*******************Imagenes***************/
+.subtituImagenes{
+    margin-top: 30px;
+}
+.imagenes{
+    width: 85%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    grid-auto-rows: 350px;
+}
+.img-cont{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s all;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-cont:nth-child(1){
+    background-image: url(../img/Cuartos.jpg);
+}
+.img-cont:nth-child(2){
+    background-image: url(../img/Casas.jpg);
+}
+.img-cont:nth-child(3){
+    background-image: url(../img/Edificios.jpg);
+}
+.img-cont:nth-child(4){
+    background-image: url(../img/Departamentos.jpg);
+}
+.img-cont:hover::before{
+    transform: translateY(0);
+}
+.img-cont:hover.img-cont h3{
+    transform: translateY(0);
+    z-index: 1;
+}
+.img-cont::before{
+    content: '';
+    position: absolute;
+    transform: translateY(110%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8));
+    transition: .3s all;
+    border-radius: 10px;
+}
+.img-cont h3{
+    color: #fff;
+    transform: translateY(100px);
+    transition: .3s;
+    z-index: -1;
+    font-size: 24px;
+    font-weight: 600;
+}
+.ligthBox{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: .3s all;
+}
+.ligthBox img{
+    width: 50%;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arriba{
+    transform: translateX(-100%);
+}
+.efecto{
+    transform: scale(1);
+}
+.textos{
+    color: #fff;
+}
+/******************Nosotros****************/
+.nosotros{
+    background: #f7f7f7;
+    padding: 60px 0 20px 0;
+}
+.subtitulo{
+    text-align: center;
+    font-weight: 500;
+}
+.subtitulo h3{
+    font-size: 17px;
+    color: #7E7D7D;
+}
+.subtitulo h1{
+    font-size: 40px;
+    color: #292922;
+}
+.nosotros-cont{
+    width: 55%;
+    margin: 15px auto;
+    text-align: center;
+}
+.nosotros-cont img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 25px 0;
+}
+.nosotros-cont p{
+    color: #8A8A8A;
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+.nosotros-cont h3{
+    color: #292922;
+    font-size: 22px;
+    padding: 15px 0;
+}
+/*****************Usuarios*****************/
+.Usuarios{
+    width: 70%;
+    margin: 25px auto;
+}
+.personajes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+}
+.personajes .user img{
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.personajes .user h3{
+    text-align: center;
+    padding: 25px 0;
+    color: #9c2828;
+}
+.personajes .user p{
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+    font-size: 13px;
+    padding-top: 25px;
+}
+footer{
+    background: rgba(57, 85, 90, 0.534);
+    padding-bottom: 0.1px;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+.contact-us{
+    width: 40%;
+    color: #fff;
+}
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+.brand+p{
+    font-weight: 500;
+}
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.social-media i{
+    display: flex;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+.social-media i:hover{
+    background: #fff;
+    color:rgba(57, 85, 90, 0.534);
+}
+@media (max-width:1080px){
+    .menu-x{
+        grid-column-start: span 1;
+        text-align: left;
+    }
+    .menu-x{
+        display: inline-block;
+    }
+    .menu-contenedor{
+        display: none;
+    }
+    .head-cont{
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+    }
+    .head-cont h2{
+        grid-column-start: span 5;
+    }  
+}
+@media (max-width:800px){
+    .nosotros-cont img{
+        padding: 15px 0;
+    }
+    .nosotros-cont p{
+        font-size: 15px;
+    }
+    .nosotros-cont{
+        width: 70%;
+    }
+    .header-cont h1{
+        font-size: 45px;
+    }
+    .header-cont h3{
+        font-size: 20px;
+    }  
+    .imagenes{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .personajes .user{
+        grid-column-start: span 2;
+        width: 90%;
+        margin: auto;
+    }
+}
+@media (max-width:600px){
+    .img-cont{
+        grid-column-start: span 2;
+    }
+    .contact-us h2{
+        font-size: 35px;
+    }
+    .contact-us p{
+        font-size: 15px;
+    }
+    .social-media i{
+        width: 50px;
+        height: 50px;
+    }
+}
